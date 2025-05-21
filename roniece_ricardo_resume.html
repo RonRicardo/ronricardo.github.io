@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roniece Ricardo - Resume</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+  <style>
+    p, strong {
+      color: black;
+    }
+    #resume {
+      background: white;
+      color: #000;
+      padding: 2em;
+      max-width: 8.5in;
+      margin: 2em auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      font-family: "Source Sans Pro", sans-serif;
+    }
+    #resume h1 {
+      color: #e91e63;
+      font-size: 2em;
+      margin-bottom: 0;
+    }
+    #resume h2 {
+      color: #e91e63;
+      font-size: 1.5em;
+      margin-top: 0.5em;
+      border-bottom: 2px solid #e91e63;
+      padding-bottom: 0.2em;
+    }
+    #resume h3 {
+      color: black;
+      font-size: 1.2em;
+      margin-top: 1em;
+    }
+    #resume p, #resume ul {
+      margin-bottom: 1em;
+      line-height: 1.6;
+    }
+    #resume ul {
+      padding-left: 1.2em;
+    }
+    #resume ul li {
+      list-style: disc;
+    }
+    .resume-header {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+  </style>
+</head>
+<body class="is-preload">
+
+  <!-- Resume Content -->
+  <div id="resume">
+    <div class="resume-header">
+      <h1>RONIECE RICARDO</h1>
+      <p><strong>Full-Stack Software Engineer</strong></p>
+      <p>roniecericardo@gmail.com • 347-583-1889 • <a href="https://ronricardo.github.io">ronricardo.github.io</a> • <a href="https://linkedin.com/in/roniecericardo">LinkedIn</a></p>
+    </div>
+
+    <h2>Personal Summary</h2>
+    <p>Full-stack software engineer with 7+ years of experience building user-facing and platform tools using Ruby on Rails, Go, JavaScript, TypeScript, and React. Strong background in developer tooling, documentation systems, and community platforms. Skilled in cross-functional collaboration, system refactors, and mentoring newer engineers.</p>
+
+    <h2>Technical Skills</h2>
+    <p>JavaScript (ES6+), TypeScript, React, Redux, GraphQL, Ruby on Rails, Go, HTML, CSS, SQL (PostgreSQL, SQLite), Git, Heroku, GitHub Actions, REST APIs, CI/CD, Kubernetes, Docker </p>
+
+    <h2>Experience</h2>
+
+    <h3>GitHub</h3>
+    <p><em>Software Engineer III — Sep 2023 – Present</em><br>
+       <em>Software Engineer II — Aug 2021 – Sep 2023</em></p>
+    <ul>
+      <li>Contributed to GitHub Discussions (Ruby on Rails + GraphQL), adding features to improve community engagement</li>
+      <li>Developed backend and frontend enhancements for GitHub Education</li>
+      <li>Maintained the GitHub Feed, integrating Go-powered data with a Ruby on Rails rendering layer</li>
+      <li>Modernized documentation tooling in GitHub Docs using TypeScript and internal libraries</li>
+      <li>Completed a rotation with the Ruby Architecture team, improving platform stability</li>
+    </ul>
+
+    <h3>Rhino</h3>
+    <p><em>Software Engineer — Nov 2019 – Jun 2021</em></p>
+    <ul>
+      <li>Implemented a new coverage workflow in a Rails monolith, improving property owner onboarding</li>
+      <li>Launched landlord self-service enrollment UI with React and Redux, reducing ops team load</li>
+      <li>Co-led homepage redesign efforts in collaboration with product and design teams</li>
+      <li>Created and standardized interview rubrics to support equitable hiring processes</li>
+    </ul>
+
+    <h3>Polar Notion</h3>
+    <p><em>Software Engineer (Contract) — Jul 2019 – Oct 2019</em></p>
+    <ul>
+      <li>Scoped and delivered MVPs for early-stage startups using Rails and vanilla JS</li>
+      <li>Collaborated with designers on product features and UX improvements</li>
+      <li>Performed code reviews and participated in agile planning cycles</li>
+    </ul>
+
+    <h3>Flatiron School (via WeWork)</h3>
+    <p><em>Software Engineering Coach — Oct 2018 – Jun 2019</em></p>
+    <ul>
+      <li>Taught Ruby, Rails, JavaScript, and React to full-time immersive students</li>
+      <li>Led lectures and mentored students through technical challenges and capstone projects</li>
+      <li>Optimized internal instructor tooling using Rails and simple front-end enhancements</li>
+    </ul>
+
+    <h2>Education</h2>
+
+    <h3>Flatiron School</h3>
+    <p><em>Software Engineering Immersive — 2018</em></p>
+
+    <h3>Borough of Manhattan Community College</h3>
+    <p><em>AA Liberal Arts — 2017</em></p>
+  </div>
+
+  <!-- Download Button -->
+  <section class="main special">
+    <footer class="major">
+      <ul class="actions special">
+        <li><button class="button primary" onclick="downloadPDF()">Download my resume as a PDF!</button></li>
+      </ul>
+    </footer>
+  </section>
+
+  <script>
+    function downloadPDF() {
+      const resume = document.getElementById("resume");
+      html2pdf().from(resume).save('Roniece_Ricardo_Resume.pdf');
+    }
+  </script>
+
+</body>
+</html>
